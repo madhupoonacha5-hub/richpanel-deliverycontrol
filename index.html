@@ -10,14 +10,36 @@
 
 :root{--paper:#fbfaf7;--cream:#f6f1e7;--ink:#141414;--body:#333;--muted:#65635f;--line:#dddcd6;--brass:#7a4e24;--green:#2a6b52;--red:#a13737}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--body);font:15px/1.5 'General Sans',Arial,sans-serif}main{max-width:1330px;margin:auto;padding:0 clamp(14px,3.5vw,45px) 35px}header,.row,.toolbar,footer{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}header{padding:19px 0}.brand{font-weight:700;font-size:1.05rem}.mark{display:inline-grid;place-items:center;width:27px;height:27px;background:var(--green);color:white;border-radius:6px;margin-right:7px}.tag{border:1px solid var(--line);border-radius:30px;padding:4px 9px;font-size:.74rem;color:var(--muted);background:white}.hero{padding:25px 28px;background:var(--ink);color:var(--cream);border-radius:14px;position:relative;overflow:hidden}.hero::after{content:"";position:absolute;width:400px;height:400px;background:radial-gradient(circle,#44534780,transparent 65%);right:-60px;top:-180px;pointer-events:none}.eyebrow{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--brass)}.hero .eyebrow{color:#d6c3a6}.hero h1{color:var(--cream);font-size:clamp(2.3rem,5vw,4.1rem);line-height:1.04;max-width:850px;letter-spacing:-.035em;margin:7px 0 12px}.hero p{max-width:760px;color:#e5e0d6}h1,h2,h3{font-family:Nohemi,'General Sans',Arial,sans-serif;color:var(--ink);font-weight:600;margin:0 0 8px}h2{font-size:1.32rem;letter-spacing:-.025em;line-height:1.2}h3{font-size:1rem}p{margin:0 0 8px}small,.muted{color:var(--muted)}.toolbar,.panel,.metric,.stepnav{border:1px solid var(--line);border-radius:11px;background:white}.toolbar{padding:10px;margin:12px 0}.actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap}button,select,input{font:inherit;font-size:.82rem;color:var(--ink)}button,select,input[type=number]{border:1px solid #cccac3;border-radius:7px;padding:7px 9px;background:#f7f6f2}button{cursor:pointer;font-weight:600}button.primary{background:#262626;color:white;border-color:#262626}button:disabled{opacity:.43;cursor:default}:focus-visible{outline:3px solid #b48c60;outline-offset:3px}.stepnav{padding:8px;display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-bottom:12px}.stepnav div{font-size:.76rem;color:var(--muted);border-top:3px solid var(--line);padding:5px}.stepnav .active{border-color:var(--green);color:var(--ink);background:#f0f5f0}.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.metric{padding:11px}.metric strong{display:block;font-size:clamp(1.3rem,2.3vw,1.8rem);font-family:Nohemi,Arial,sans-serif;letter-spacing:-.04em;color:var(--ink)}.grid{display:grid;grid-template-columns:1.05fr 1fr;gap:11px;margin-top:11px}.panel{padding:15px;min-width:0}.wide{grid-column:1/-1}.table{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left}th,td{border-bottom:1px solid var(--line);padding:7px;font-size:.8rem;vertical-align:top}th{font-weight:600;color:var(--muted)}.compact th,.compact td{white-space:nowrap}tr.focus{background:#f6f1e7}.badge{display:inline-block;border-radius:20px;background:#f1efe9;padding:3px 7px;font-size:.73rem;font-weight:600}.good{color:var(--green)}.warn{color:var(--brass)}.bad{color:var(--red)}.callout{border-left:3px solid var(--green);background:#edf4ee;padding:9px 11px;margin:9px 0}.callout.warn{border-color:var(--brass);background:#faf2e6}.callout.bad{border-color:var(--red);background:#fff0ed}.split{display:grid;grid-template-columns:1fr 1fr;gap:8px}.chat{border:1px solid var(--line);border-radius:9px;padding:10px;margin:7px 0;font-size:.85rem;background:#f7f6f2}.chat.shopper{margin-right:22px;background:#f2eee5}.chat.agent{margin-left:22px;background:#eef5ef}.bar{height:6px;border-radius:8px;background:#e9e7df;margin:5px 0 10px;overflow:hidden}.bar i{height:100%;display:block;background:var(--green)}details{padding-top:8px;margin-top:9px;border-top:1px solid var(--line)}summary{cursor:pointer;color:var(--brass);font-weight:600}.log{list-style:none;margin:7px 0 0;padding:0;max-height:210px;overflow:auto}.log li{border-top:1px solid var(--line);padding:7px 0;font-size:.83rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f6f4ed;border-radius:8px;padding:10px;font:13px/1.6 'General Sans',Arial,sans-serif}.fields{display:flex;gap:10px;flex-wrap:wrap}.fields label{font-size:.8rem;color:var(--muted);flex:1;min-width:130px}.fields input{display:block;width:100%;accent-color:var(--green)}a{color:var(--green)}footer{font-size:.74rem;color:var(--muted);margin-top:15px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}[hidden]{display:none!important}@media(max-width:850px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}}@media(max-width:500px){.metrics{grid-template-columns:1fr 1fr}.stepnav{grid-template-columns:repeat(3,1fr)}.split{grid-template-columns:1fr}.hero{padding:21px}}
+
+#migration-runway{scroll-margin-top:20px;margin-bottom:16px}
+#migration-runway .metrics{grid-template-columns:repeat(3,minmax(0,1fr));margin:12px 0}
+#migration-runway .migration-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}
+#migration-runway .migration-controls label{font-weight:650}
+#migration-runway .table{min-width:0}
+.hero .migration-link{display:inline-block;margin-top:4px;font-weight:700}
+@media(max-width:640px){#migration-runway .metrics{grid-template-columns:1fr}}
 </style>
 </head>
 <body><main>
 <header><div class="brand"><span class="mark" aria-hidden="true">↗</span>Delivery Control Room</div><span class="tag">Richpanel candidate work sample · Fictional data</span></header>
-<section class="hero"><div class="eyebrow">Head of Support &amp; Operations</div><h1>Deliver the promise.<br>Build the capacity.</h1><p>Follow six brands through implementation, hypercare, support and adoption. Inspect the shopper outcome, the Engineering evidence, the trained team behind delivery and the cost of getting it right.</p></section>
+<section class="hero"><div class="eyebrow">Head of Support &amp; Operations</div><h1>Deliver the promise.<br>Build the capacity.</h1><p>Follow six brands through implementation, hypercare, support and adoption. Inspect the shopper outcome, the Engineering evidence, the trained team behind delivery and the cost of getting it right.</p><a class="migration-link" href="#migration-runway">Explore the Migration Runway ↓</a></section>
 <div class="toolbar"><div class="actions"><button id="restart" class="primary">↻ Replay 90 days</button><button id="pause">Pause</button><button id="next">Next event</button><button id="finish">CEO brief</button></div><div class="actions"><button id="surge">Inject 50% demand surge</button><button id="logout">Inject owner logout</button><select id="speed" aria-label="Replay speed"><option value="0.5">0.5× speed</option><option value="1" selected>1× speed</option><option value="2">2× speed</option></select><span class="tag" id="status"></span></div></div>
 <div id="timeline" class="stepnav" aria-label="Operating lifecycle"></div><div id="announce" class="sr" role="status"></div>
 <section id="metrics" class="metrics" aria-label="Executive scorecard"></section>
+<section class="panel" id="migration-runway" aria-labelledby="migration-title">
+<div class="row"><div><div class="eyebrow">Before go-live · Aster Home</div><h2 id="migration-title">Migration Runway</h2></div><span id="migration-status" role="status"></span></div>
+<p class="muted">I’d run a real Richpanel implementation and work the resulting support cases first. This fictional Zendesk migration shows one improvement I’d test after that.</p>
+<div id="migration-metrics" class="metrics" aria-label="Illustrative migration comparison"></div>
+<div class="migration-controls">
+<button id="migration-play" class="primary">Play migration walkthrough</button>
+<label for="migration-mode">Active path</label><select id="migration-mode"><option value="assisted">Assisted preflight</option><option value="manual">Manual-led</option></select>
+<button id="migration-next">Next migration step</button>
+<button id="migration-fail">Inject integration failure</button>
+<button id="migration-retest">Apply fix &amp; retest</button>
+</div>
+<div class="split"><div id="migration-plan" class="table"></div><div id="migration-evidence" class="table"></div></div>
+<details><summary>What I’d measure on a real launch</summary><p>Track elapsed days by blocker, hands-on hours, critical checks, and migration-related support cases in the first week. Both paths use the same scope and approval standard. The schedule, fixtures, repair delay and effort are modeled. This work sample runs locally in the browser with synthetic data.</p><p><a href="https://www.richpanel.com/learn/migrate-from-zendesk-to-richpanel">Richpanel migration playbook</a> · <a href="https://www.intercom.com/help/en/articles/9396032-historical-data-migration-to-intercom">Intercom historical migration guide</a> · <a href="https://www.richpanel.com/trust/guarantee-terms">Richpanel guarantee terms</a></p></details>
+</section>
 <div class="grid">
 <section class="panel wide"><div class="row"><h2>Brand portfolio</h2><span class="tag">Select a brand to inspect · Replay pauses</span></div><div id="portfolio" class="table compact"></div></section>
 <section class="panel"><div class="eyebrow">Executive replay</div><h2 id="headline"></h2><p id="story" class="muted"></p><div id="action"></div><div id="launch"></div></section>
@@ -30,7 +52,7 @@
 <section class="panel"><h2>Decision log</h2><ul id="log" class="log"></ul></section>
 <section class="panel"><h2>CEO decisions</h2><div id="decisions"></div></section>
 <section class="panel wide"><div class="row"><h2>Executive brief</h2><div class="actions"><button id="download">Download brief</button><button id="audit">Download audit JSON</button></div></div><pre id="memo"></pre>
-<details><summary>Assumptions, definitions and public workflow references</summary><p>All brands, conversations, employees, costs, dates and outcomes are synthetic. The 50% Day 30 guarantee and the 70% Day 60 goal are distinguished. Guarantee eligibility and terms must be confirmed against the signed customer agreement. The demo starts its guarantee window after launch readiness is approved.</p><p>The quality ledger uses mutually exclusive outcomes. Baseline, post-fix and Day 60 are separate completed 1,000-conversation samples. Their comparison is descriptive. The Day 30 guarantee view uses the full synthetic 30-day cohort. No-repeat-contact checks use a seven-day observation window. CSAT is shown with its response count.</p><p>Brand support cost combines illustrative AI usage, human handling and the stated helpdesk allocation. AI cost remains on handed-off conversations. Richpanel internal delivery cost uses productive hours and a separate headcount budget. Capacity released is distinct from cash saved.</p><p>Brand inspiration comes from Richpanel’s public website palette and typography. This independent simulation uses fictional policies, permissions and approval events.</p><p><a href="https://www.richpanel.com/">Product and guarantee</a> · <a href="https://www.richpanel.com/pricing">Pricing reference</a> · <a href="https://www.richpanel.com/learn/ai-actions-cancel-order">Cancellation workflow</a> · <a href="https://www.richpanel.com/learn/ai-actions-refund-order">Refund approval</a> · <a href="https://www.richpanel.com/learn/ai-actions">Action catalog</a></p></details>
+<details><summary>Assumptions, definitions and public workflow references</summary><p>All brands, conversations, employees, costs, dates and outcomes are synthetic. The 50% Day 30 guarantee and the 70% Day 60 goal are distinguished. Guarantee eligibility and terms must be confirmed against the signed customer agreement. Aster’s guarantee window starts at confirmed customer-facing AI go-live. Readiness approval and channel cutover are recorded separately.</p><p>The quality ledger uses mutually exclusive outcomes. Baseline, post-fix and Day 60 are separate completed 1,000-conversation samples. Their comparison is descriptive. The Day 30 guarantee view uses the full synthetic 30-day cohort. No-repeat-contact checks use a seven-day observation window. CSAT is shown with its response count.</p><p>Brand support cost combines illustrative AI usage, human handling and the stated helpdesk allocation. AI cost remains on handed-off conversations. Richpanel internal delivery cost uses productive hours and a separate headcount budget. Capacity released is distinct from cash saved.</p><p>Brand inspiration comes from Richpanel’s public website palette and typography. This independent simulation uses fictional policies, permissions and approval events.</p><p><a href="https://www.richpanel.com/">Product and guarantee</a> · <a href="https://www.richpanel.com/pricing">Pricing reference</a> · <a href="https://www.richpanel.com/learn/ai-actions-cancel-order">Cancellation workflow</a> · <a href="https://www.richpanel.com/learn/ai-actions-refund-order">Refund approval</a> · <a href="https://www.richpanel.com/learn/ai-actions">Action catalog</a></p></details>
 </section></div><footer><span>Madhu Poonacha · Support, implementation, hypercare &amp; Customer Success</span><span>Independent work sample · Synthetic scenario</span></footer>
 </main>
 <script>
@@ -45,9 +67,9 @@ const brands=[
  {id:"orbit",name:"Orbit Kitchen",stage:"Support coverage",owner:"Leo · Support",health:"Review",next:"Confirm qualified shift backup",due:"Shift change",monthly:700}
 ];
 const scenes=[
- ["Day -7","Implementation","Start by doing the work.","Own the migration checklist, review brand policies and test action permissions. Aster stays on its existing helpdesk until go-live readiness is approved."],
- ["Day 0","Implementation","A test failure blocks launch.","Aster’s shipped-order cancellation test fails. The launch gate stays closed until the policy and handoff path pass a retest."],
- ["Day 1","Hypercare","Launch with a named owner.","The corrected tests pass, customer training is complete and Aster approves launch. Its guarantee clock starts at this go-live event."],
+ ["Preflight","Implementation","Start by doing the work.","Inspect the source setup and surface the VIP routing dependency. Aster stays on Zendesk while history imports in the background."],
+ ["Dry run","Implementation","A test failure blocks launch.","Verify VIP and fallback routing, history and action permissions. Aster’s shipped-order cancellation test fails, so the launch gate stays closed until the safe handoff passes retest."],
+ ["Aster cutover","Hypercare","Launch with a named owner.","Record approval, switch the channels and confirm customer-facing AI go-live. Maya owns the Hypercare handoff."],
  ["Day 24","Hypercare","Inspect what prevents automation.","Cedar is below target. Review actual conversations and isolate a missing approved policy condition in the cancellation workflow."],
  ["Day 26","Hypercare","Test the change before rollout.","Apply the approved policy correction. An unfulfilled order can proceed through the required approval. A shipped order follows the handoff path."],
  ["Day 30","Hypercare","Verify the whole 30-day cohort.","The new sample improves, while the guarantee panel independently evaluates the full 30-day population. Answer quality, action evidence and reopens remain visible."],
@@ -66,7 +88,7 @@ const samples={
 };
 function fresh(){return {step:-1,playing:false,speed:1,selected:"aster",demand:1,hourCost:30,
  launchPassed:false,live:false,policyFixed:false,approved:false,actionDone:false,eng:0,coached:false,hireReady:false,champion:false,proposal:false,commercial:false,
- logout:false,backup:false,brands:brands.map(a=>({...a})),events:[]};}
+ logout:false,backup:false,migration:{mode:"assisted",only:false,integration:"Pending",repairDays:0,approvedDay:null,cutoverDay:null,aiGoLiveDay:null},brands:brands.map(a=>({...a})),events:[]};}
 let s=fresh(),timer;
 const a=id=>s.brands.find(b=>b.id===id);
 const money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n);
@@ -75,8 +97,10 @@ const sample=()=>s.step>=10?samples.day60:s.step>=5?samples.after:samples.before
 function operatingCost(m){const human=(m.handoff+m.reopen)*m.minutes/60;return {human,ai:m.ai*m.aiUnit,total:human*20+m.ai*m.aiUnit+99};}
 function capacity(){
  const improved=s.step>=10,hire=s.hireReady?24:0;
+ const migrationHours=migrationForecast(s.migration.mode,s.migration.repairDays).hours;
+ const migrationAdjustment=s.step<=2?migrationHours-22:0;
  return [
-  {fn:"Implementation",need:((improved?84:96)+(s.policyFixed?4:16))*s.demand,have:72+hire},
+  {fn:"Implementation",need:((improved?84:96)+(s.policyFixed?4:16))*s.demand+migrationAdjustment,have:72+hire},
   {fn:"Customer Success",need:46*s.demand,have:48},
   {fn:"Richpanel Support",need:(s.eng===3?30:40)*s.demand,have:48-(s.logout?24:0)}
  ].map(r=>({...r,gap:Math.max(0,r.need-r.have)}));
@@ -95,14 +119,34 @@ function ownerRecovery(){
  else{a("orbit").owner="Support Lead · Escalated";a("orbit").health="Coverage gap";a("orbit").next="Find qualified coverage; send customer update";event("orbit","Support Lead","No qualified backup yet. Coverage gap escalated; case and update remain due.");}
 }
 function advance(){
+ if(migrationBlocked()){
+  s.playing=false;
+  event("aster","Maya · Implementation","Cutover blocked by MIG-201. Zendesk continues serving shoppers; AI go-live remains pending.");
+  return false;
+ }
  if(s.step>=scenes.length-1)return;
  s.step++;
  switch(s.step){
- case 0:event("aster","Head of Operations","Representative migration, policy and support work inspected before role design.");break;
- case 1:event("aster","Maya · Implementation","Launch blocked. Shipped-order test failed; retain existing helpdesk.");break;
+ case 0:
+  event("aster","Head of Operations","Implementation and support work inspected. VIP routing dependency flagged on modeled Day "+migrationPlans[s.migration.mode].discovery+".");
+  break;
+ case 1:
+  event("aster","Maya · Implementation","Historical snapshot reconciled and VIP / fallback routing passed. Shipped-order test failed; keep Zendesk live until the safe handoff passes retest.");
+  break;
  case 2:
-  s.launchPassed=true;s.live=true;a("aster").stage="Live · Hypercare";a("aster").health="Owned";a("aster").next="Inspect first-week conversations";a("aster").due="Go-live +7 days";
-  event("aster","Maya / Customer Admin","Migration reconciled, policy retested, permissions approved and training completed. Launch approved.");break;
+  {
+  const day=migrationForecast(s.migration.mode,s.migration.repairDays).cutover;
+  s.launchPassed=true;
+  s.migration.approvedDay=day;
+  event("aster","Maya / Customer Admin","Day "+day+": policy retest passed and training verified. Readiness approved.");
+  s.migration.cutoverDay=day;
+  event("aster","Maya · Implementation","Day "+day+": final delta reconciled, all open tickets owned, and channels switched.");
+  s.migration.aiGoLiveDay=day;
+  s.live=true;a("aster").stage="Live · Hypercare";a("aster").health="Owned";a("aster").next="Inspect first-week conversations";a("aster").due="Go-live +7 days";
+  event("aster","Maya / Customer Admin","Day "+day+": confirmed customer-facing AI go-live. Maya owns Hypercare; Day 30 review is due Day "+(day+30)+".");
+  if(s.migration.only)s.playing=false;
+  break;
+ }
  case 3:s.selected="cedar";event("cedar","Head / Isha","64 sampled misses inspected. Most common fixable cause is a missing approved cancellation condition.");break;
  case 4:
   s.policyFixed=true;s.approved=true;s.actionDone=true;s.selected="cedar";
@@ -136,6 +180,7 @@ function revenue(){
 }
 function decisions(){
  const d=[];
+ if(migrationBlocked())d.push("Migration: keep Zendesk live until Engineering fixes MIG-201 and Maya verifies the order integration.");
  if(!s.live)d.push("Implementation: close the failed test and verify customer launch approval.");
  if(s.step<5)d.push("Hypercare: inspect the full Day 30 cohort before asserting guarantee achievement.");
  if(s.eng===1||s.eng===2)d.push("Support: escalate overdue ENG-142 and keep customer updates due until recovery is verified.");
@@ -152,6 +197,7 @@ function memo(){
  "RICHPANEL DELIVERY CONTROL ROOM | CEO BRIEF",
  "Synthetic work sample · "+(s.step<0?"Ready":scenes[s.step][0]),
  "Customer outcomes: "+(s.live?"Aster launched after readiness approval.":"Aster launch on hold.")+" Cedar: "+(s.step>=5?"1,600/3,000 (53.3%) in the full Day 30 cohort.":"Guarantee result pending full cohort review."),
+ "Aster migration: "+migrationPlans[s.migration.mode].label+" · "+(s.live?"AI live Day "+s.migration.aiGoLiveDay+"; Day 30 review due Day "+(s.migration.aiGoLiveDay+30):migrationBlocked()?"held on MIG-201; Zendesk still serving":"cutover pending")+". Illustrative comparison: "+migrationForecast("manual",s.migration.repairDays).cutover+" vs "+migrationForecast("assisted",s.migration.repairDays).cutover+" days and 8 hours of implementation capacity released.",
  "Quality sample: "+m.resolved+"/"+m.n+" autonomous outcomes · "+m.reopen+" reopens · "+m.qa+"/"+m.qaN+" correct in human QA · "+pc(m.csat/m.replies)+" positive CSAT ("+m.replies+" responses).",
  "Brand support economics per 1,000 conversations: "+money(c.total)+" vs "+money(b.total)+" baseline · "+money(b.total-c.total)+" modeled reduction. AI cost "+money(c.ai)+" includes work on handoffs. Released capacity is not booked cash savings.",
  "Engineering: "+(s.eng===3?"ENG-142 retested and customer recovery confirmed.":s.eng?"Known issue ENG-142 open; customer follow-through remains owned.":"Evidence review pending.")+" Coverage: "+(s.logout?s.backup?"qualified backup assigned.":"Support Lead owns uncovered open work.":"normal ownership."),
@@ -162,13 +208,97 @@ function memo(){
  "All records, policies, staffing assumptions and costs are fictional. Guarantee definitions require contract validation."
  ].join("\n\n");
 }
+const migrationPlans = {
+ manual: {label:"Manual-led", discovery:7, mapping:9, validation:13, hours:[6,7,9]},
+ assisted: {label:"Assisted preflight", discovery:1, mapping:4, validation:9, hours:[3,4,7]}
+};
+const migrationSnapshot = Array.from({length:12000},(_,i)=>"ZD-"+(i+1));
+const migrationDelta = ["ZD-12000","ZD-12001","ZD-12002"];
+const migrationOpenTickets = migrationSnapshot.slice(0,12);
+const migrationHold = {days:2,hours:2};
+const migrationFixtures = [
+ {id:"ZD-101",tier:"vip",expected:"Priority Support"},
+ {id:"ZD-102",tier:null,expected:"General Support"},
+ {id:"ZD-103",tier:"standard",expected:"General Support"}
+];
+function migrationForecast(mode, repairDays=0) {
+ const plan=migrationPlans[mode];
+ return {cutover:plan.validation+1+repairDays,hours:plan.hours.reduce((sum,h)=>sum+h,0)+(repairDays?migrationHold.hours:0)};
+}
+function migrationEvidence() {
+ const ready=s.step>=1;
+ const stage=migrationPlans[s.migration.mode];
+ const forecast=migrationForecast(s.migration.mode,s.migration.repairDays);
+ const routes=ready?migrationFixtures.map(test=>{
+  const actual=test.tier==="vip"?"Priority Support":"General Support";
+  return {...test,actual,pass:actual===test.expected};
+ }):[];
+ // Synthetic snapshot and delta batches overlap on stable source IDs.
+ const destination=new Set(ready?migrationSnapshot:[]);
+ if(s.live)migrationDelta.forEach(id=>destination.add(id));
+ const unowned=s.live?migrationOpenTickets.filter(id=>!destination.has(id)).length:null;
+ return {
+  mode:s.migration.mode, discoveryDay:stage.discovery, forecast, routes,
+  snapshotCount:ready?migrationSnapshot.length:0, importedCount:destination.size,
+  expectedCount:migrationSnapshot.length+(s.live?2:0),
+  integration:s.migration.integration, outboundMessages:ready?0:null,
+  unownedOpenTickets:unowned,
+  approvedDay:s.migration.approvedDay, cutoverDay:s.migration.cutoverDay,
+  aiGoLiveDay:s.migration.aiGoLiveDay,
+  day30Due:s.migration.aiGoLiveDay===null?null:s.migration.aiGoLiveDay+30
+ };
+}
+function migrationBlocked() {
+ return s.step===1 && s.migration.integration==="Failed";
+}
+function renderMigration() {
+ const m=migrationEvidence();
+ const manual=migrationForecast("manual",s.migration.repairDays);
+ const assisted=migrationForecast("assisted",s.migration.repairDays);
+ const hours=manual.hours-assisted.hours;
+ const milestone=day=>day===null?"Pending":"Day "+day;
+ const state=s.live?"AI go-live confirmed":migrationBlocked()?"Hold · integration failed":s.step===1?"Evidence review":"Preflight";
+ $("migration-status").textContent=state;
+ $("migration-status").className="badge "+(migrationBlocked()?"bad":s.live?"good":"warn");
+ $("migration-metrics").innerHTML=[
+  ["Calendar days to cutover",manual.cutover+" → "+assisted.cutover,(manual.cutover-assisted.cutover)+" days earlier in this model"],
+  ["Implementation effort",manual.hours+" → "+assisted.hours+" h",hours+" h of trained capacity released"],
+  ["Value of released time",money(hours*s.hourCost),"At "+money(s.hourCost)+"/h · payroll unchanged"]
+ ].map(([label,value,note])=>'<article class="metric"><div class="eyebrow">'+label+'</div><strong>'+value+'</strong><small>'+note+'</small></article>').join("");
+ $("migration-plan").innerHTML=table(["Same scope and checks","Manual-led","Assisted"],[
+  ["VIP routing dependency found","Day "+migrationPlans.manual.discovery,"Day "+migrationPlans.assisted.discovery],
+  ["Mapping approved","Day "+migrationPlans.manual.mapping,"Day "+migrationPlans.assisted.mapping],
+  ["Historical snapshot · parallel lane","Day 2","Day 2"],
+  ["Workflow validation complete","Day "+(manual.cutover-1),"Day "+(assisted.cutover-1)],
+  ["Approved channel cutover","Day "+manual.cutover,"Day "+assisted.cutover]
+ ]);
+ const active=s.live?"Live · Hypercare":"Zendesk serves the brand until cutover.";
+ $("migration-evidence").innerHTML=table(["Launch evidence","Active path · "+migrationPlans[m.mode].label],[
+  ["Source and scope","Zendesk · 12,000 historical conversations · VIP routing · order actions"],
+  ["VIP mapping","Day "+m.discoveryDay+" discovery · Maya and brand CX approve the mapping"],
+  ["Routing dry run",m.routes.length?m.routes.map(r=>r.id+" → "+r.actual+(r.pass?" ✓":" · expected "+r.expected)).join("<br>"):"Pending · test VIP, blank and standard fields"],
+  ["History and final delta",s.live?m.importedCount.toLocaleString("en-US")+" / "+m.expectedCount.toLocaleString("en-US")+" · overlapping ID deduplicated":m.snapshotCount?"12,000 / 12,000 snapshot · final delta pending":"Snapshot pending"],
+  ["Shopper continuity",s.live?(migrationOpenTickets.length-m.unownedOpenTickets)+" / "+migrationOpenTickets.length+" open tickets owned · 0 duplicate outbound replies (modeled)":m.outboundMessages===0?"0 outbound messages during dry run":"Dry run pending"],
+  ["Order integration",m.integration==="Failed"?"MIG-201 · expected verified test order update; connector timed out and order stayed unchanged. Maya owns the brand update; Engineering owns the fix.":m.integration==="Retest passed"?"MIG-202 · expected test order update observed in destination state":s.live?"Verified action and safe handoff":"Pending action verification"],
+  ["Readiness / cutover / AI go-live",[m.approvedDay,m.cutoverDay,m.aiGoLiveDay].map(milestone).join(" / ")],
+  ["Next checkpoint",s.live?"Day 30 review due Day "+m.day30Due:"Forecast cutover Day "+m.forecast.cutover+" · "+active]
+ ]);
+ $("migration-mode").value=m.mode;
+ $("migration-mode").disabled=s.live;
+ $("migration-fail").disabled=s.step!==1||m.integration!=="Pending";
+ $("migration-retest").disabled=!migrationBlocked();
+ $("migration-next").disabled=s.step>=2;
+ $("migration-next").textContent=s.step<0?"Run source preflight":s.step===0?"Run migration dry run":"Verify and attempt cutover";
+}
+
 function render(){
+ renderMigration();
  const step=s.step,scene=scenes[step],m=sample(),b=operatingCost(samples.before),c=operatingCost(m),cap=capacity(),r=revenue(),gap=cap.reduce((n,x)=>n+x.gap,0);
  const labels=["Implementation","Hypercare","Support + Engineering","People + Capacity","Success + Adoption"];
  const active=step<2?0:step<6?1:step<9?2:step===9?3:4;
  $("timeline").innerHTML=labels.map((l,i)=>'<div class="'+(i===active?"active":"")+'"'+(i===active?' aria-current="step"':'')+'>'+String(i+1).padStart(2,"0")+' · '+l+'</div>').join("");
  const metrics=[
-  ["Launch gate",s.live?"Approved":"Hold","Aster readiness and owner"],
+  ["Launch gate",s.live?"Approved":"Hold","Aster · readiness, cutover and AI go-live"],
   ["Day 30 guarantee",step>=5?"53.3%":"Pending",step>=5?"1,600 / 3,000 eligible":"Full-window cohort required"],
   ["Day 60 target",step>=10?"72.0%":"Pending","Operating goal ≥70%"],
   ["Modeled brand cost",money(c.total),money(b.total-c.total)+" reduction / 1,000"],
@@ -182,7 +312,7 @@ function render(){
  const last=s.events.at(-1);
  $("action").innerHTML=last?'<p class="callout">'+last.note+'</p>':"";
  $("launch").innerHTML=step<=2?table(["Launch check","Status"],[
-  ["Migration counts and required fields",s.live?"Reconciled":"Under review"],["Policy and action test",s.launchPassed?"Passed retest":"Shipped-order test pending / failed"],["Customer training and launch approval",s.live?"Verified":"Required"],["Named owner","Maya · through launch and hypercare"]
+  ["Migration counts and required fields",step>=1?"Snapshot reconciled"+(s.live?" · delta verified":" · delta pending"):"Under review"],["Policy and action test",s.launchPassed?"Passed retest":migrationBlocked()?"Blocked · MIG-201":"Shipped-order test pending / failed"],["Customer training and launch approval",s.live?"Verified":"Required"],["Named owner","Maya · through launch and hypercare"]
  ]):"";
  const selected=a(s.selected);
  $("accountTitle").textContent=selected.name;$("accountStatus").innerHTML=badge(selected.health);
@@ -231,7 +361,7 @@ function render(){
  $("demandValue").textContent=s.demand.toFixed(1)+"×";
  $("capacity").innerHTML=table(["Richpanel function","Need h/wk","Trained h/wk","Gap"],cap.map(r=>[r.fn,r.need.toFixed(1),r.have.toFixed(1),'<span class="'+(r.gap?"bad":"good")+'">'+r.gap.toFixed(1)+'</span>']));
  const hc=s.hireReady?8:7,headCost=hc*160*s.hourCost,budget=38400;
- $("budget").innerHTML='<p class="callout '+(headCost>budget?'bad':'')+'">Delivery payroll '+money(headCost)+'/month against '+money(budget)+' approved envelope ('+hc+' / 8 budgeted FTE). Reserve capacity and specialist coverage still require a schedule.</p><small>Weekly effort cost by function · '+cap.map(r=>r.fn+': '+money(r.need*s.hourCost)).join(' · ')+'</small><details><summary>Workload and staffing assumptions</summary><p class="muted">Each productive FTE contributes 24 hours/week after modeled leave, coverage, training and nonproductive time. Implementation starts at 96 hours plus 16 hours rework, improving to 84 + 4. CS needs 46 hours. Internal support needs 40 hours, reducing to 30 after repeat-incident recovery. A logout removes 24 support hours. A qualified backup can take the case, while total capacity stays reduced and any overload stays visible. Hire readiness adds 24 implementation hours. Demand scales workload, while coverage remains separately visible. Payroll uses 160 paid hours/FTE/month. The approved monthly payroll budget stays fixed at $38,400 when hourly cost changes.</p></details>';
+ $("budget").innerHTML='<p class="callout '+(headCost>budget?'bad':'')+'">Delivery payroll '+money(headCost)+'/month against '+money(budget)+' approved envelope ('+hc+' / 8 budgeted FTE). Reserve capacity and specialist coverage still require a schedule.</p><small>Weekly effort cost by function · '+cap.map(r=>r.fn+': '+money(r.need*s.hourCost)).join(' · ')+'</small><details><summary>Workload and staffing assumptions</summary><p class="muted">Each productive FTE contributes 24 hours/week after modeled leave, coverage, training and nonproductive time. Implementation starts at 96 hours plus 16 hours of rework, improving to 84 + 4. The opening week includes 22 hours for Aster on the manual-led path, replaced by the selected path’s effort until cutover. CS needs 46 hours. Internal support needs 40 hours, reducing to 30 after repeat-incident recovery. A logout removes 24 support hours. A qualified backup can take the case, while total capacity stays reduced and any overload stays visible. Hire readiness adds 24 implementation hours. Demand scales workload, while coverage remains separately visible. Payroll uses 160 paid hours/FTE/month. The approved monthly payroll budget stays fixed at $38,400 when hourly cost changes.</p></details>';
  $("log").innerHTML=s.events.slice().reverse().map(e=>'<li><strong>'+e.account+'</strong> <small>· '+e.when+' · '+e.owner+'</small><br>'+e.note+'</li>').join("")||'<li class="muted">Replay ready.</li>';
  $("decisions").innerHTML=decisions().map(d=>'<p class="callout warn">'+d+'</p>').join("")||'<p class="callout">No modeled capacity gap at current demand. Check actual work and quality in the next weekly review.</p>';
  $("memo").textContent=memo();
@@ -242,16 +372,38 @@ function render(){
  $("surge").disabled=s.demand>=1.5;$("logout").disabled=s.logout;
 }
 function schedule(){clearTimeout(timer);if(s.playing&&s.step<scenes.length-1)timer=setTimeout(()=>{advance();render();schedule();},6500/s.speed);}
-function restart(play=true){
+function restart(play=true,migrationOnly=false,mode="assisted"){
  clearTimeout(timer);s=fresh();s.playing=play;
+ s.migration.only=migrationOnly;s.migration.mode=mode;
  $("demand").value=1;$("hourCost").value=30;$("speed").value=1;
  if(play)advance();render();schedule();
 }
 function save(name,data,type){const url=URL.createObjectURL(new Blob([data],{type}));const a=document.createElement("a");a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 $("restart").addEventListener("click",()=>restart());
-$("pause").addEventListener("click",()=>{s.playing=!s.playing;if(s.playing&&s.step<0)advance();render();schedule();});
+$("pause").addEventListener("click",()=>{s.migration.only=false;s.playing=!s.playing;if(s.playing&&s.step<0)advance();render();schedule();});
 $("next").addEventListener("click",()=>{s.playing=false;advance();render();schedule();});
-$("finish").addEventListener("click",()=>{while(s.step<scenes.length-1)advance();render();schedule();});
+$("finish").addEventListener("click",()=>{
+ s.migration.only=false;
+ while(s.step<scenes.length-1){if(advance()===false)break;}
+ render();schedule();
+});
+$("migration-play").addEventListener("click",()=>restart(true,true,s.migration.mode));
+$("migration-mode").addEventListener("change",e=>{
+ s.playing=false;s.migration.mode=e.target.value;
+ if(s.step>=0)event("aster","Implementation Lead","Selected "+migrationPlans[s.migration.mode].label+" for the migration comparison.");
+ render();schedule();
+});
+$("migration-next").addEventListener("click",()=>{s.playing=false;advance();render();schedule();});
+$("migration-fail").addEventListener("click",()=>{
+ s.playing=false;s.migration.integration="Failed";s.migration.repairDays=migrationHold.days;
+ event("aster","Maya / Engineering","MIG-201: order update timed out with unchanged destination state. Keep Zendesk live; next step is a verified retest.");
+ render();schedule();
+});
+$("migration-retest").addEventListener("click",()=>{
+ s.migration.integration="Retest passed";
+ event("aster","Maya / Engineering","MIG-202: test order update observed in destination state. Integration blocker cleared; cutover still needs sign-off.");
+ render();
+});
 $("surge").addEventListener("click",()=>{s.demand=1.5;$("demand").value=1.5;event("capacity","Head","Demand rises 50%. Staffing stays based on trained availability; gaps remain visible.");render();});
 $("logout").addEventListener("click",()=>{s.logout=true;event("orbit","Support Lead","Leo logs off unexpectedly. Open case remains unresolved with a customer update due.");ownerRecovery();render();});
 $("demand").addEventListener("input",e=>{s.demand=Math.min(2,Math.max(1,Number(e.target.value)));render();});
@@ -259,6 +411,6 @@ $("hourCost").addEventListener("change",e=>{const n=Number(e.target.value);s.hou
 $("speed").addEventListener("change",e=>{s.speed=Number(e.target.value);schedule();});
 $("portfolio").addEventListener("click",e=>{const b=e.target.closest("[data-brand]");if(!b)return;s.selected=b.dataset.brand;s.playing=false;render();schedule();$("portfolio").querySelector('[aria-pressed="true"]').focus();});
 $("download").addEventListener("click",()=>save("richpanel-ceo-brief.txt",memo(),"text/plain"));
-$("audit").addEventListener("click",()=>save("richpanel-delivery-audit.json",JSON.stringify({synthetic:true,day:s.step<0?"Ready":scenes[s.step][0],brands:s.brands,quality:sample(),brandEconomics:operatingCost(sample()),capacity:capacity(),revenue:revenue(),decisions:decisions(),events:s.events},null,2),"application/json"));
-restart(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+$("audit").addEventListener("click",()=>save("richpanel-delivery-audit.json",JSON.stringify({synthetic:true,day:s.step<0?"Ready":scenes[s.step][0],brands:s.brands,migration:migrationEvidence(),quality:sample(),brandEconomics:operatingCost(sample()),capacity:capacity(),revenue:revenue(),decisions:decisions(),events:s.events},null,2),"application/json"));
+restart(location.hash!=="#migration-runway"&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
 </script></body></html>
